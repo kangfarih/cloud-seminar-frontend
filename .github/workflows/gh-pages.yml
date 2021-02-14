@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: 12.x
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
     - uses: actions/checkout@v2
@@ -22,9 +22,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install the site dependencies
       run: npm install
-    - name: Build the site static assets
-      run: npm run build
-    - name: Export Build
+    - name: Build and Export
       run: npm run export
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.7.3
