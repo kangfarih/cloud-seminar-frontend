@@ -1,7 +1,14 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+var numStr : string = '23';
 
+var num1 : number = Sum(3,4);
+
+function Sum(n1:number, n2:number){
+
+  return (n1 + n2);
+}
 
 export default function Home() {
   return (
