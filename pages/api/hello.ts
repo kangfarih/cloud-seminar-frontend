@@ -1,6 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default (req, res) => {
+import { IncomingMessage, ServerResponse } from "http";
+
+export default (req: IncomingMessage, res: ServerResponse) => {
 
   var _data = { name: 'John Doe' };
   if (req.method === 'POST') {
