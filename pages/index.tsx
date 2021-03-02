@@ -22,7 +22,7 @@ export default function Home() {
     return()=>{
       clearInterval(intrVal);
     }
-  }, []);
+  }, [value]);
 
   return (
     <div className={styles.container}>
