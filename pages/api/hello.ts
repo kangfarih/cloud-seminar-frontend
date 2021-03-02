@@ -2,7 +2,7 @@
 
 import { IncomingMessage, ServerResponse } from "http";
 
-export default (req: IncomingMessage, res: ServerResponse) => {
+export default (req, res) => {
 
   var _data = { name: 'John Doe' };
   if (req.method === 'POST') {
